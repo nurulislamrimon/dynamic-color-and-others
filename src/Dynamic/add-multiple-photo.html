@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple photo</title>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="text-lg font-bold text-center">Multiple Photo Template</h1>
+      <section class="w-fit mx-auto">
+        <div
+          class="grid grid-cols-2 grid-rows-3 gap-2 [&>*]:h-32 [&>*]:w-32 [&>:first-child]:col-span-2 [&>:first-child]:row-span-2 [&>*]:min-h-full [&>*]:min-w-full"
+          id="product-photos-container"
+        >
+          <label
+            for="product-photos"
+            class="border flex items-center justify-center text-xs"
+          >
+            🖼️ Upload Photos
+            <input
+              type="file"
+              id="product-photos"
+              name="product-photos"
+              class="hidden"
+              onchange="handleFiles(this.files)"
+              multiple
+            />
+          </label>
+        </div>
+      </section>
+    </main>
+    <!-- script to add multiple photo -->
+    <script src="./add-multiple-photo.js"></script>
+  </body>
+</html>

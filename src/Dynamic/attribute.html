@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Attribute</title>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+  </head>
+  <body>
+    <main class="px-5">
+      <!-- =================================
+      select attribute section==============
+      ================================== -->
+      <h4 class="text-md text-red-regular font-semibold my-5">Attribute</h4>
+      <p class="text-xs text-gray-400 font-semibold mb-3">Attribute</p>
+      <!-- start ===== input of select attribute for multiple selection =====start -->
+      <div class="w-full relative border min-h-10 flex items-center rounded-md">
+        <label
+          for="attribute"
+          class="relative bg-white z-10 inline m-1 mr-3"
+          id="attribute-container"
+        ></label>
+        <select
+          id="attribute"
+          name="attribute"
+          type="text"
+          class="absolute inset-0 z-0 rounded-md"
+        >
+          <option value="" disabled selected></option>
+          <option value="Color">Color</option>
+          <option value="Storage">Storage</option>
+        </select>
+      </div>
+      <!-- end ===== input of select attribute for multiple selection =====end -->
+
+      <!-- =================================
+    select color section==============
+    ================================== -->
+      <section
+        class="border my-5 p-3 rounded-md hidden"
+        id="color-variant-section"
+      >
+        <h5 class="font-semibold">Color</h5>
+        <!-- start ===== input of select colors for multiple selection =====start -->
+        <div
+          class="w-full relative border min-h-10 flex items-center rounded-md my-3"
+        >
+          <label
+            for="colors"
+            class="relative bg-white z-10 inline-block flex-wrap m-1 mr-5"
+            id="colors-input-container"
+          ></label>
+          <select
+            id="colors"
+            name="colors"
+            type="text"
+            class="absolute inset-0 z-0 rounded-md"
+          >
+            <option value="" disabled selected></option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Orange">Orange</option>
+            <option value="Gray">Gray</option>
+            <option value="Navy">Navy</option>
+            <option value="Black">Black</option>
+            <option value="Purple">Purple</option>
+          </select>
+        </div>
+        <!-- end ===== input of select colors for multiple selection =====end -->
+
+        <!-- start================ color variant ================start -->
+        <div id="color-variation-container">
+          <!-- add and remove color variant by DOM manupulation -->
+        </div>
+        <!-- end=================== color variant ================end -->
+      </section>
+
+      <!-- =================================
+    select storage section==============
+    ================================== -->
+      <section
+        class="border my-5 p-3 rounded-md hidden"
+        id="storage-variant-section"
+      >
+        <h5 class="font-semibold">Storage</h5>
+        <!-- start ===== input of select storages for multiple selection =====start -->
+        <div
+          class="w-full relative border min-h-10 flex items-center rounded-md my-3"
+        >
+          <label
+            for="storages"
+            class="relative bg-white z-10 inline-block flex-wrap m-1 mr-5"
+            id="storages-input-container"
+          ></label>
+          <select
+            id="storages"
+            name="storages"
+            type="text"
+            class="absolute inset-0 z-0 rounded-md"
+          >
+            <option value="" disabled selected></option>
+            <option value="128GB">128 GB</option>
+            <option value="256GB">256 GB</option>
+            <option value="512GB">512 GB</option>
+            <option value="1024GB">1024 GB</option>
+          </select>
+        </div>
+        <!-- end ===== input of select storages for multiple selection =====end -->
+
+        <!-- start================ storage variant ================start -->
+        <div id="storage-variation-container">
+          <!-- add and remove storage variant by DOM manupulation -->
+        </div>
+        <!-- end=================== storage variant ================end -->
+      </section>
+    </main>
+    <!-- script for dynamic attribute -->
+    <script src="./attribute.js"></script>
+  </body>
+</html>

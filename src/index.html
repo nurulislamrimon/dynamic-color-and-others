@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/styles.css" />
+    <title>index.css</title>
+  </head>
+  <body>
+    <!-- Modal Trigger Button -->
+    <button
+      id="modal-open"
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      Open Modal
+    </button>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center"
+    >
+      <div class="bg-white p-6 rounded shadow-md w-1/2">
+        <div class="flex justify-end">
+          <button
+            id="modal-close"
+            class="text-gray-600 hover:text-gray-800 focus:outline-none"
+          >
+            x
+          </button>
+        </div>
+        <div class="modal-content">
+          <!-- Your Modal Content Goes Here -->
+          <p>This is a modal window.</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Get the modal and the buttons
+      const modal = document.getElementById("modal");
+      const modalOpenBtn = document.getElementById("modal-open");
+      const modalCloseBtn = document.getElementById("modal-close");
+
+      // Function to open the modal
+      function openModal() {
+        modal.classList.remove("hidden");
+      }
+
+      // Function to close the modal
+      function closeModal() {
+        modal.classList.add("hidden");
+      }
+
+      // Event listeners to trigger opening and closing of the modal
+      modalOpenBtn.addEventListener("click", openModal);
+      modalCloseBtn.addEventListener("click", closeModal);
+
+      // Close modal if user clicks outside of the modal content
+      window.addEventListener("click", (event) => {
+        if (event.target === modal) {
+          closeModal();
+        }
+      });
+
+      // Prevent clicks inside the modal from closing it
+      modal.addEventListener("click", (event) => {
+        event.stopPropagation();
+      });
+    </script>
+  </body>
+</html>

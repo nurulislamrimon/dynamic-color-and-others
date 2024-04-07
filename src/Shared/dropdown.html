@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../dist/styles.css" />
+
+    <!-- tabler link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <title>dropdown</title>
+  </head>
+  <body>
+    <ul class="flex items-center justify-center">
+      <li>
+        <details class="group">
+          <!-- summary -->
+          <summary
+            class="flex items-center justify-between p-2 marker:content-none hover:cursor-pointer duration-500 gap-[10px] text-text-gray px-3 py-2 rounded hover:bg-red-rgba-10 transition-all border-l-2 border-l-white hover:border-l-2 hover:border-l-red-regular hover:text-red-regular group/main"
+          >
+            <span class="flex gap-2 group-hover/main:text-red-regular">
+              <i class="ti ti-compass text-xl"></i>
+              <span>POS</span>
+            </span>
+            <i
+              class="ti ti-chevron-down text-xl text-gray-500 transition group-open:rotate-180 group-hover/main:text-red-regular"
+            ></i>
+          </summary>
+          <!-- article -->
+          <div class="px-4 pb-4">
+            <ul class="flex flex-col gap-1 pl-2">
+              <li
+                class="flex items-center gap-2 hover:bg-red-rgba-10 transition-all border-l-2 border-l-white hover:border-l-2 hover:border-l-red-regular px-3 py-2 rounded group/child1"
+              >
+                <span
+                  class="w-[10px] h-[10px] rounded-full bg-fill-color group-hover/child1:bg-red-300"
+                ></span>
+                <a class="group-hover/child1:text-red-regular" href="">Pos</a>
+              </li>
+              <li
+                class="flex items-center gap-2 hover:bg-red-rgba-10 transition-all border-l-2 border-l-white hover:border-l-2 hover:border-l-red-regular px-3 py-2 rounded group/child2"
+              >
+                <span
+                  class="w-[10px] h-[10px] rounded-full bg-fill-color group-hover/child2:bg-red-300"
+                ></span>
+                <a class="group-hover/child2:text-red-regular" href="">
+                  Pos Order</a
+                >
+              </li>
+            </ul>
+          </div>
+        </details>
+      </li>
+    </ul>
+  </body>
+</html>

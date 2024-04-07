@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic create-attribute</title>
+    <link rel="stylesheet" href="../../dist/styles.css" />
+  </head>
+  <body>
+    <main class="px-5">
+      <!-- =================================
+      select create-attribute section==============
+      ================================== -->
+      <h4 class="text-md text-red-regular font-semibold my-5">
+        create-attribute
+      </h4>
+      <p class="text-xs text-gray-400 font-semibold mb-3">create-attribute</p>
+      <!-- start ===== input of select create-attribute =====start -->
+      <input
+        id="create-attribute"
+        name="create-attribute"
+        type="text"
+        class="rounded-md p-1 border w-full"
+      />
+      <!-- end ===== input of select create-attribute for multiple selection =====end -->
+
+      <!-- =================================
+    select color section==============
+    ================================== -->
+      <section
+        class="border my-5 p-3 rounded-md hidden"
+        id="color-variant-section"
+      >
+        <h5 class="font-semibold">Color</h5>
+        <!-- start ===== input of select colors for multiple selection =====start -->
+        <div
+          class="w-full relative border min-h-10 flex items-center rounded-md my-3"
+        >
+          <div
+            class="relative bg-white z-10 inline-block flex-wrap m-1 mr-5"
+            id="colors-input-container"
+          ></div>
+          <label for="add-new-color" class="text-gray-500 whitespace-nowrap">
+            <span>🎨</span>
+            Color name
+          </label>
+          <input
+            type="color"
+            name="add-new-color"
+            id="add-new-color"
+            class="hidden"
+          />
+        </div>
+        <!-- end ===== input of select colors for multiple selection =====end -->
+      </section>
+
+      <!-- =================================
+    select other-attribute section==============
+    ================================== -->
+      <section
+        class="border my-5 p-3 rounded-md hidden"
+        id="other-attribute-variant-section"
+      >
+        <h5 class="font-semibold">Attribute</h5>
+        <!-- start ===== input of select attribute for multiple selection =====start -->
+        <div class="w-full border min-h-10 flex items-stretch rounded-md my-3">
+          <label
+            for="add-new-other-attribute"
+            class="rounded-md bg-white z-10 inline-block flex-wrap m-1"
+            id="other-attributes-input-container"
+          ></label>
+          <input
+            type="text"
+            name="add-new-other-attribute"
+            id="add-new-other-attribute"
+            class="border-none outline-none min-h-full w-full block"
+          />
+        </div>
+        <!-- end ===== input of select other-attributes for multiple selection =====end -->
+      </section>
+    </main>
+    <!-- script for dynamic create-attribute -->
+    <script src="./create-attribute.js"></script>
+  </body>
+</html>

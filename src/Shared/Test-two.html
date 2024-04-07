@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../dist/styles.css" />
+    <title>Test Two</title>
+  </head>
+  <body>
+    <div class="h-screen w-screen flex items-center justify-center flex-col">
+      <div
+        class="bg-slate-400 text-white rounded px-4 py-1 cursor-pointer"
+        onclick="divToggle()"
+      >
+        nizam
+      </div>
+      <div class="space-x-2 items-center justify-center flex-col" id="info">
+        <a href="./Modal.html" class="hover:bg-red-regular hover:text-white p-2"
+          >my name</a
+        >
+        <a class="hover:bg-red-regular hover:text-white p-2">Your Name</a>
+      </div>
+    </div>
+    <script>
+      function divToggle() {
+        let p = document.getElementById("info");
+        if (p.style.display === "none") {
+          p.style.display = "block";
+        } else {
+          p.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
